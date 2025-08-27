@@ -3,33 +3,40 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution built with React.js, ASP.NET, and SQL Server",
-      technologies: ["React.js", "ASP.NET", "SQL Server", "CSS"],
-      link: "#",
-      image: "🛒"
+      title: "Camp Management App",
+      description:
+        "FullStack Camp management application with real-time updates",
+      technologies: [
+        "React.js",
+        "JavaScript",
+        "Asp.net Core Web API",
+        "SQL Server",
+      ],
+      link: "https://amjadqanou.github.io/CampsManagementSystem/",
+      image: "🏕",
     },
     {
-      title: "Task Management App",
-      description: "Modern task management application with real-time updates",
-      technologies: ["React.js", "Node.js", "JavaScript"],
-      link: "#",
-      image: "📋"
+      title: "Nova Shop",
+      description: "e-commerce solution built with React.js",
+      technologies: ["React.js", "Html", "CSS"],
+      link: "https://amjadqanou.github.io/NovaShop/",
+      image: "🛒",
+    },
+
+    {
+      title: "Tractors Shop",
+      description: "e-commerce solution built with React.js",
+      technologies: ["React.js"],
+      link: "https://amjadqanou.github.io/tractors/",
+      image: "🚚",
     },
     {
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for data visualization and analysis",
-      technologies: ["React.js", "C#", "SQL Server"],
-      link: "#",
-      image: "📊"
+      title: "ALT SPACE",
+      description: "Exploring the Space with React.js",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      link: "https://yaffa-solutions.github.io/ALT-SPACE/",
+      image: "💫",
     },
-    {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website showcasing development skills",
-      technologies: ["React.js", "HTML", "CSS", "JavaScript"],
-      link: "#",
-      image: "💼"
-    }
   ];
 
   return (
@@ -41,10 +48,10 @@ const ProjectsSection = () => {
             Recent projects that showcase my development skills
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 group"
             >
@@ -60,7 +67,7 @@ const ProjectsSection = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
-                    <span 
+                    <span
                       key={techIndex}
                       className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium"
                     >
@@ -68,8 +75,8 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <Button 
-                  onClick={() => window.open(project.link, '_blank')}
+                <Button
+                  onClick={() => window.open(project.link, "_blank")}
                   className="w-full bg-hero-gradient hover:opacity-90 text-primary-foreground"
                 >
                   View Project
