@@ -61,7 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Portfolio specific colors
+				skill: {
+					js: 'hsl(var(--skill-js))',
+					react: 'hsl(var(--skill-react))',
+					dotnet: 'hsl(var(--skill-dotnet))',
+					html: 'hsl(var(--skill-html))',
+					node: 'hsl(var(--skill-node))',
+					sql: 'hsl(var(--skill-sql))'
 				}
+			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)',
+				'tech-gradient': 'var(--tech-gradient)'
+			},
+			boxShadow: {
+				'card': 'var(--card-shadow)',
+				'card-hover': 'var(--card-shadow-hover)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
