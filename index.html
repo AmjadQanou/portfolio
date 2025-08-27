@@ -32,4 +32,9 @@
   <body>
     <div id="root"></div>
   </body>
+  <script>
+    if (!window.location.hash) {
+      window.location.replace(window.location.href + "#/");
+    }
+  </script>
 </html>
