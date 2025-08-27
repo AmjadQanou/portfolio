@@ -1,37 +1,44 @@
 const SkillsSection = () => {
   const skills = [
-    { name: "JavaScript", color: "skill-js", icon: "⚡" },
-    { name: "React.js", color: "skill-react", icon: "⚛️" },
-    { name: "ASP.NET", color: "skill-dotnet", icon: "🔷" },
-    { name: "HTML & CSS", color: "skill-html", icon: "🎨" },
-    { name: "Node.js", color: "skill-node", icon: "🟢" },
-    { name: "SQL Server", color: "skill-sql", icon: "💾" }
+    { name: "React.js", level: 95, color: "hsl(var(--skill-react))" },
+    { name: "JavaScript", level: 90, color: "hsl(var(--skill-js))" },
+    { name: "Asp.net", level: 90, color: "hsl(var(--skill-dotnet))" },
+    { name: "Node.js", level: 80, color: "hsl(var(--skill-node))" },
+    { name: "UI/UX Design", level: 75, color: "hsl(var(--skill-ui))" },
+    { name: "Web Api", level: 85, color: "hsl(var(--skill-api))" },
+    { name: "HTML/CSS", level: 95, color: "hsl(var(--skill-html))" }
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">My Skills</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
-          </p>
+        {/* Section Header */}
+        <div className="mb-16">
+          <h2 className="section-title">My Skills</h2>
+          <div className="section-underline"></div>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {skills.map((skill, index) => (
-            <div 
-              key={skill.name}
-              className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 text-center group"
-            >
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                {skill.icon}
+        {/* Skills Grid */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+            {skills.map((skill, index) => (
+              <div key={skill.name} className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-foreground">{skill.name}</span>
+                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                </div>
+                <div className="skill-bar">
+                  <div 
+                    className="skill-progress rounded-full"
+                    style={{ 
+                      backgroundColor: skill.color,
+                      width: `${skill.level}%`
+                    }}
+                  ></div>
+                </div>
               </div>
-              <h3 className="font-semibold text-card-foreground text-sm">
-                {skill.name}
-              </h3>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
